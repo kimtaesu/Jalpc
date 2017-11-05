@@ -1,29 +1,31 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
-  desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail: BlueWhale
+#  desc:
+#    detail: I worked at Company A ...
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
+    detail: 2017. 07 ~ 2017. 10
   job:
-    detail: CTO
-    i18n: company_a_job
+    detail: Android Developer
   icon: fa-plus-square
 
 - name:
-    detail: Company B
-    i18n: company_b
-  desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail: BNP Innvation
+#  desc:
+#    detail: I worked at Company A ...
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
+    detail: 2014. 07 ~ 2017. 01
   job:
-    detail: Full Stack Developer
-    i18n: company_b_job
+    detail: Android Developer
+  icon: fa-plus-square
+
+- name:
+    detail: 인프라웨어
+#  desc:
+#    detail: I worked at Company B ...
+  date:
+    detail: 2012. 01 ~ 2014. 01
+  job:
+    detail: Android Developer
   icon: fa-plus-square
