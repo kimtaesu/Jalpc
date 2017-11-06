@@ -1,44 +1,130 @@
-<div class="container" id="i18_projects">
+<div>
+
     <div class="row m-b-lg">
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
-            <h1><span data-i18n="projects.my_projects">My Projects</span></h1>
+            <h1><span data-i18n="projects.my_projects">Projects</span></h1>
         </div>
     </div>
-    <div class="row">
-        {% for project in site.data.index.projects %}
-            {% assign loopindex = forloop.index | modulo: 2 %}
-            {% if forloop.last %}
-                {% if forloop.last == forloop.first %}
-            <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
-                {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
-                {% endif %}
-            {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-            {% endif %}
-              <div class="team-member">
-                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
-                  <h4>
-                  {% if project.url %}
-                  <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
-                  {% elsif project.repo %}
-                  <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
-                  {% else %}
-                  <span class="navy">{{ project.name }}</span>
-                  {% endif %}
-                  </h4>
-                  <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
-                  {% if project.repo %}
-                  <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fa fa-star"></i> ...</a>&emsp;&emsp;
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fa fa-code-fork"></i> ...</a>
-                      <div style="height: 10px;"></div>
-                  </div>
-                  {% endif %}
-              </div>
-          </div>
-      {% endfor %}
+    <div class="row row-grey">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!-- <h2>Skills</h2>
+            <h3>Frontend</h3>
+            <h3>Backend</h3>
+            <h3>Mobile App</h3>
+            <h3>Frameworks</h3> -->
+            <!-- <h2>Work</h2> -->
+
+            <div class="row work-item-row">
+                <div class="col-lg-8 col-lg-push-4">
+                    <img src="static/assets/img/project/smartsee4.png" class="img-responsive center-block">
+                </div>
+                <div class="col-lg-4 col-lg-pull-8">
+                    <h1>SmartSee4.0</h1>
+                    <p class="large">SmartSee3.0 의 차기 제품으로 기존 제품의 문제점을 개선, 새로운 요구사항 개발한 Application 입니다.</p>
+                    <h2>In charge of</h2>
+                    <p class="large">Android part로 리더로
+                        <a href="https://github.com/saki4510t/UVCCamera"> UVCCamera</a> Wearable Camera 엔진을 대체하고
+                        <a href="https://github.com/kimtaesu/portfolio/wiki/Android-cameras-of-device-design-pattern">
+                            Camera 구조 설계</a>,
+                        <a href="https://github.com/kimtaesu/portfolio/wiki/%EC%9B%A8%EC%96%B4%EB%9F%AC%EB%B8%94-%EC%B9%B4%EB%A9%94%EB%9D%BC-IPC-%ED%86%B5%EC%8B%A0">웨어러블
+                            카메라 IPC 통신</a>
+                        등 기존의 많은 문제점의 구조를 설계하였습니다.
+                        <a href="http://square.github.io/retrofit/">Retrofit</a>,
+                        <a href="https://oauth.net/2/">OAuth2</a>,
+                        <a href="https://github.com/ReactiveX/RxJava">RxJava</a> 등
+                        Library를 사용하여 개발하였습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <img src="static/assets/img/techlogos/java.png" class="techlogo" width="100">
+                    <img src="static/assets/img/techlogos/android.png" class="techlogo" width="100">
+                </div>
+            </div>
+            <!--<div class="row text-center" style="margin:20px;">-->
+            <!--<a class="btn btn-launch" href="http://vistoryapp.com" target="blank">Open app site</a>-->
+            <!--</div>-->
+        </div>
     </div>
+
+    <div class="row row-white">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!-- <h2>Skills</h2>
+            <h3>Frontend</h3>
+            <h3>Backend</h3>
+            <h3>Mobile App</h3>
+            <h3>Frameworks</h3> -->
+            <!-- <h2>Work</h2> -->
+
+            <div class="row work-item-row">
+                <div class="col-lg-8">
+                    <img src="static/assets/img/project/smartsee3.jpg" class="img-responsive center-block">
+                </div>
+                <div class="col-lg-4">
+                    <h1><a href="https://play.google.com/store/apps/details?id=com.mb.usb.monitor"
+                           target="blank">SmartSee3.0 Wearable Camera</a></h1>
+                    <p class="large">재난 상황 시 두 손이 자유로운 상태에서 현장을 실시간으로 중계하기 위한 Application으로
+                        <a href="http://www.e-gen.or.kr/nemc/business_others.do">스마트 의료지도</a>,
+                        <a href="http://www.e-gen.or.kr/nemc/business_others.do?contentsno=9">원격협진</a>,
+                        각 시구군청에 배포되었습니다.</p>
+                    <h2>In charge of</h2>
+                    <p class="large">Rooting이 필요없는 <a href="https://github.com/ktossell/libuvc">libuvc</a>는 Wearable
+                        Camera를 Support
+                        합니다.
+                        NDK, JNI, Android를 전반적으로 담당하였으며, Media 관련 지식 (YUV, RGB, MJPEG)과 SIP 프로토콜을 기반으로 개발된 자체 솔루션에
+                        Wearable Camera의
+                        Row 영상 데이터를 전송하여 실시간 영상 통화를 지원하는 것이 주 업무입니다.</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <img src="static/assets/img/techlogos/java.png" class="techlogo" width="100">
+                    <img src="static/assets/img/techlogos/android.png" class="techlogo" width="100">
+                </div>
+            </div>
+            <!--<div class="row text-center" style="margin:20px;">-->
+            <!--<a class="btn btn-launch"-->
+            <!--href="https://play.google.com/store/apps/details?id=com.chrisdermody.mydeliverypal&hl=en"-->
+            <!--target="blank">Go to app</a>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <div class="row row-grey">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!-- <h2>Skills</h2>
+            <h3>Frontend</h3>
+            <h3>Backend</h3>
+            <h3>Mobile App</h3>
+            <h3>Frameworks</h3> -->
+            <!-- <h2>Work</h2> -->
+
+            <div class="row work-item-row">
+                <div class="col-lg-8 col-lg-push-4">
+                    <img src="static/assets/img/project/polaris_office.jpg" class="img-responsive center-block">
+                </div>
+                <div class="col-lg-4 col-lg-pull-8">
+                    <h1><a href="https://play.google.com/store/apps/details?id=com.infraware.polarisoffice4&hl=ko"
+                           target="blank">PolarisOffice4.0 Samsung / LG</a></h1>
+                    <p class="large">MS Word/PPT/Excel 등 다양한 문서를 편집을 할 수 있는 Application으로 Samsung / LG 스마트폰에 pre-built로
+                        배포되었습니다.</p>
+                    <h2>In charge of</h2>
+                    <p class="large">인프라웨어 자체 Office 엔진을 기반으로 NDK를 통한 Documents의 Editing/ Viewing 을 지원하는 솔루션입니다.
+                        저는 JNI, Android UI / UX를 담당하여 전반적으로 이슈 수정 및 기능 개선이 주 업무입니다.</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <img src="static/assets/img/techlogos/java.png" class="techlogo" width="100">
+                    <img src="static/assets/img/techlogos/android.png" class="techlogo" width="100">
+                </div>
+            </div>
+            <!--<div class="row text-center" style="margin:20px;">-->
+            <!--<a class="btn btn-launch" href="http://jobb.ie" target="blank">Launch</a>-->
+            <!--</div>-->
+        </div>
+    </div>
+
 </div>
-<br>
